@@ -1,0 +1,38 @@
+# include <iostream>
+
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+ setlocale(LC_ALL, ".1251");
+ system("color 1F");
+
+ int A[30], N, k;
+
+ printf("\n\t Введiть  натуральне число вiд 2 до 30  ");
+ 
+      a: cin >> N;
+ if (N >= 2 && N <= 30)
+  cout <<"\nВи ввели число :" <<N;
+  else
+  {
+   printf("\n\t Неправильне Введення  Введiть  натуральне число вiд 2 до 30 ще раз");
+   goto a;
+  }
+
+ A[0] = 1;
+ A[1] = 1;
+ cout << "\n" << A[0];
+ cout << "\n" << A[1];
+ 
+ for (k = 2; k < N; k++) {
+  A[k] = A[k - 2] + A[k - 1];
+  cout << "\n" << A[k];
+ };
+ cout << "\n";
+ system ("pause");
+return 0;
+}
